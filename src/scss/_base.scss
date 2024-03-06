@@ -3,6 +3,9 @@
 // ==================================== */
 
 :root {
+  --light: #ffffff;
+  --primary: #8000ff;
+  --dark: #161616;
 }
 
 /* ====================================
@@ -42,3 +45,18 @@ video {
 /* ====================================
 // base rules
 // ==================================== */
+.container {
+  margin-bottom: 30px;
+}
+
+.row + .row {
+  margin-top: 16px;
+}
+
+.row > .col,
+.row > [class^="col-"] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: rgba(86, 61, 124, 0.15);
+  border: 1px solid rgba(86, 61, 124, 0.2);
+}
