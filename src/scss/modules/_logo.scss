@@ -5,6 +5,19 @@
   gap: 3px;
 }
 
+@media (max-width: 991px) {
+  .logo-container {
+    width: 300px;
+    .logo-title {
+      font-size: 30px;
+    }
+
+    .logo-subtitle {
+      font-size: 11px;
+      line-height: 10px;
+    }
+  }
+}
 .logo-title {
   color: $primary;
   font-size: 50px;
