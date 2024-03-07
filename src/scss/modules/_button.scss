@@ -1,0 +1,16 @@
+.button {
+  padding: 10px 17px 10px;
+  text-decoration: none;
+}
+
+.button.t-outline {
+  border: 2px solid $primary;
+  transition: background-position 0.8s, color 0.3s;
+  background: url(../asset/img/button-background.webp);
+  background-position: left;
+
+  &:hover {
+    background-position: right;
+    color: $light;
+  }
+}

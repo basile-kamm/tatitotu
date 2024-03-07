@@ -1,0 +1,17 @@
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3px;
+}
+
+.logo-title {
+  color: $primary;
+  font-size: 50px;
+}
+
+.logo-subtitle {
+  width: 235px;
+  font-size: 15px;
+  line-height: 15px;
+}

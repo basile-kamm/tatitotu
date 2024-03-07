@@ -3,9 +3,6 @@
 // ==================================== */
 
 :root {
-  --light: #ffffff;
-  --primary: #8000ff;
-  --dark: #161616;
 }
 
 /* ====================================
@@ -16,6 +13,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  &::selection {
+    background-color: rgba($primary, 0.8);
+    color: $light;
+  }
 }
 
 html {
@@ -29,6 +31,9 @@ body {
 
   font-size: 1rem;
   line-height: 1.25;
+  font-family: "Nohemi", sans-serif;
+  font-weight: 400;
+  color: $dark;
 }
 
 a {
@@ -42,21 +47,22 @@ video {
   vertical-align: middle;
 }
 
+@font-face {
+  font-family: "Nohemi";
+  src: url("../asset/font/Nohemi-Regular.woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Nohemi";
+  src: url("../asset/font/Nohemi-Thin.woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: fallback;
+}
+
 /* ====================================
 // base rules
 // ==================================== */
-.container {
-  margin-bottom: 30px;
-}
-
-.row + .row {
-  margin-top: 16px;
-}
-
-.row > .col,
-.row > [class^="col-"] {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  background-color: rgba(86, 61, 124, 0.15);
-  border: 1px solid rgba(86, 61, 124, 0.2);
-}
