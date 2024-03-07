@@ -1,0 +1,22 @@
+.section-title {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: $dark;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+
+  &.t-row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.section-select-container {
+  display: flex;
+  flex-direction: row;
+  gap: 19px;
+}
