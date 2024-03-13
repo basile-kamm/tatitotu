@@ -3,11 +3,12 @@
   flex-direction: row;
   align-items: center;
   gap: 3px;
+  transform-origin: left;
 }
 
 @media (max-width: 991px) {
   .logo-container {
-    width: 300px;
+    width: 400px;
     .logo-title {
       font-size: 30px;
     }
@@ -27,4 +28,9 @@
   width: 235px;
   font-size: 15px;
   line-height: 15px;
+}
+
+.logo-container.t-small {
+  scale: 0.7;
+  width: 400px;
 }
