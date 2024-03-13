@@ -3,50 +3,6 @@
   flex-direction: row;
 }
 
-.code-textfield {
-  position: relative;
-
-  .code-input {
-    border-radius: 1px;
-    border: 1.5px solid rgba($dark, 0.7);
-    padding: 10px 15px 8px;
-    transition: border 0.3s ease-out;
-    font-size: 16px;
-    text-transform: uppercase;
-    height: 40px;
-    transition: filter 0.3s;
-  }
-
-  .code-input:hover {
-    border: 1.5px solid rgba($dark, 1);
-  }
-
-  .code-input:focus,
-  .code-input.has-value {
-    border: 1.5px solid $dark;
-    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
-  }
-
-  .code-label {
-    position: absolute;
-    top: 11px;
-    left: 13px;
-    color: var(--light-grey);
-    font-size: 16px;
-    pointer-events: none;
-    background: white;
-    transition: transform 0.3s;
-    transform-origin: left;
-    padding: 0 5px;
-  }
-
-  .code-input:focus + .code-label,
-  .code-input.has-value + .code-label {
-    color: var(--black);
-    transform: translateY(-22px) scale(0.7);
-  }
-}
-
 .code-submit {
   background: $primary;
   height: 40px;

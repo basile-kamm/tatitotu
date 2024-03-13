@@ -34,15 +34,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const inputName = document.querySelector(".code-input");
+document.addEventListener("DOMContentLoaded", function () {
+  const textFields = document.querySelectorAll(".textfield-input");
 
-function hasValue() {
-  const inputValue = inputName.value;
-  if (inputValue) {
-    inputName.classList.add("has-value");
-  } else {
-    inputName.classList.remove("has-value");
+  textFields.forEach(function (input) {
+    input.addEventListener("blur", hasValue);
+  });
+
+  function hasValue(event) {
+    const inputValue = event.target.value;
+    if (inputValue) {
+      event.target.classList.add("has-value");
+    } else {
+      event.target.classList.remove("has-value");
+    }
   }
-}
-
-inputName.addEventListener("blur", hasValue);
+});

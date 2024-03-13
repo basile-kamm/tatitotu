@@ -1,0 +1,76 @@
+.textfield {
+  position: relative;
+
+  .textfield-input {
+    border-radius: 1px;
+    border: 1.5px solid rgba($dark, 0.7);
+    padding: 10px 15px 8px;
+    transition: border 0.3s ease-out;
+    font-size: 16px;
+    text-transform: uppercase;
+    height: 40px;
+    transition: filter 0.3s;
+  }
+
+  .textfield-input:hover {
+    border: 1.5px solid rgba($dark, 1);
+  }
+
+  .textfield-input:focus,
+  .textfield-input.has-value {
+    border: 1.5px solid $dark;
+    filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
+  }
+
+  .textfield-label {
+    position: absolute;
+    top: 11px;
+    left: 13px;
+    color: var(--light-grey);
+    font-size: 16px;
+    pointer-events: none;
+    background: white;
+    transition: transform 0.3s;
+    transform-origin: left;
+    padding: 0 5px;
+  }
+
+  .textfield-input:focus + .textfield-label,
+  .textfield-input.has-value + .textfield-label {
+    color: var(--black);
+    transform: translateY(-22px) scale(0.7);
+  }
+}
+
+.textfield-icon {
+  width: 23px;
+  height: 18px;
+  position: absolute;
+  top: 12px;
+  right: 11px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 1;
+    animation: hoverWiggle 2s infinite;
+  }
+}
+
+.textfield.t-full {
+  .textfield-input {
+    width: 100%;
+  }
+}
+
+@keyframes hoverWiggle {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
