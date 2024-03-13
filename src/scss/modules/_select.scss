@@ -33,6 +33,8 @@
 }
 
 .select-dropdown {
+  position: relative;
+  z-index: 2;
   padding: 10px;
   border: 1px solid $dark;
   background: $light;
