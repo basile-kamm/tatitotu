@@ -7,7 +7,7 @@
 }
 
 .select-title {
-  font-size: 16px;
+  font-size: 15px;
   color: rgba($dark, 0.8);
   cursor: pointer;
 }
@@ -19,6 +19,7 @@
 .select-title-icon {
   width: 9px;
   height: 7px;
+  transition: transform 0.3s;
 }
 
 .select-dropdown-text,
@@ -60,7 +61,7 @@
 
 .select:hover .select-title-icon,
 .select.is-active .select-title-icon {
-  transform: scaleY(-1);
+  transform: rotate(180deg);
 }
 
 .select-dropdown-text {

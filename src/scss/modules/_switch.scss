@@ -1,0 +1,70 @@
+.switch {
+  cursor: pointer;
+  padding-left: 10px;
+  .switch-wrapper {
+    display: inline-block;
+    width: 30px;
+    height: 10px;
+    padding: 2px;
+    border-radius: 10px;
+    background: rgba($dark, 0.3);
+    position: relative;
+    margin-right: 10px;
+  }
+
+  .switch-inner {
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    background: rgba($dark, 0.8);
+    position: absolute;
+    top: -4px;
+    left: 0;
+    transition: transform 0.3s, box-shadow 0.2s;
+  }
+
+  input:checked + .switch-wrapper .switch-inner {
+    transform: translateX(12px);
+    background: $primary;
+  }
+
+  input:checked + .switch-wrapper {
+    background: rgba($primary, 0.4);
+  }
+
+  input:hover + .switch-wrapper .switch-inner {
+    box-shadow: 0 0 2px 3px rgba($dark, 0.2);
+  }
+
+  input:checked:hover + .switch-wrapper .switch-inner {
+    box-shadow: 0 0 1px 4px rgba($primary, 0.2);
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.switch-container {
+  width: 50%;
+  position: relative;
+
+  border-bottom: 1px dashed rgba($dark, 0.3);
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.switch-img {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
