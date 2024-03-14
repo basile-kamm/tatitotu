@@ -1,13 +1,16 @@
-@mixin hover-line() {
+@mixin hover-line($color) {
+  content: "";
   height: 1px;
   position: absolute;
   left: 0;
   bottom: 0;
   right: 0;
-  transform: translateX(-100%);
+  transform: scaleX(0);
   transition: transform 0.3s ease-out;
+  background: $color;
+  transform-origin: left;
 }
 
 @mixin hover-line-action() {
-  transform: translateX(0);
+  transform: scaleX(100%);
 }

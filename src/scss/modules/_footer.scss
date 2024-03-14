@@ -8,13 +8,22 @@
 
 .footer-link {
   color: $dark;
+  position: relative;
   font-size: 19px;
   text-decoration: none;
   transition: 0.3s;
   border-bottom: 1px solid rgba($primary, 0);
 
+  &::before {
+    @include hover-line($primary);
+    transform-origin: right;
+  }
+
+  &:hover::before {
+    @include hover-line-action();
+  }
+
   &:hover {
     color: $primary;
-    border-bottom: 1px solid $primary;
   }
 }

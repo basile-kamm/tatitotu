@@ -24,11 +24,18 @@
 .select-dropdown-text,
 .select-dropdown-head {
   transition: 0.3s;
-  border-bottom: 1px solid rgba($primary, 0);
+  position: relative;
+
+  &::before {
+    @include hover-line($primary);
+  }
+
+  &:hover::before {
+    @include hover-line-action();
+  }
 
   &:hover {
     color: $primary;
-    border-bottom: 1px solid $primary;
   }
 }
 
