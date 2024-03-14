@@ -8,6 +8,7 @@
 .section {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 
   &.t-row {
     flex-direction: row;
@@ -38,18 +39,12 @@
   cursor: pointer;
 
   .section-action-line {
-    height: 1px;
+    @include hover-line();
     background: $dark;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-out;
   }
 
   &:hover .section-action-line {
-    transform: translateX(0);
+    @include hover-line-action();
   }
 }
 
@@ -58,8 +53,4 @@
   flex-direction: row;
   align-items: baseline;
   gap: 10px;
-}
-
-.section-textfield {
-  width: 100%;
 }

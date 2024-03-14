@@ -1,6 +1,7 @@
 .button {
   padding: 10px 17px 10px;
   text-decoration: none;
+  border-radius: 1px;
 }
 
 .button.t-outline {
@@ -12,5 +13,35 @@
   &:hover {
     background-position: right;
     color: $light;
+  }
+}
+
+.button.t-icon {
+  width: 100%;
+  border: 2px solid $primary;
+  color: $primary;
+  font-size: 16px;
+  position: relative;
+  padding: 15px 20px 10px;
+  transition: box-shadow 0.3s;
+  text-transform: capitalize;
+
+  .button-icon {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    transition: scale 0.3s;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px rgba($primary, 0.3),
+      0px 0px 4px 1px rgba($primary, 0.3);
+  }
+
+  &:hover .button-icon {
+    scale: 1.2;
+    transition: scale 0.3s 0.1s;
   }
 }
