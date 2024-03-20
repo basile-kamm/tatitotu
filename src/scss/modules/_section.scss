@@ -13,12 +13,16 @@
   margin-bottom: 30px;
 }
 
-.section-verbe-title {
+.section-verbe-title,
+.section-option-label {
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 400;
-  width: 100%;
   margin-bottom: 15px;
+}
+
+.section-verbe-title {
+  width: 100%;
 }
 
 .section {
@@ -34,13 +38,37 @@
   }
 }
 
+.section-print-container {
+  padding-top: 10px;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 10px;
+  font-size: 16px;
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+
+  &.is-active * {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  & * {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.2s;
+  }
+}
+
 .section-select-container {
   display: flex;
   flex-direction: row;
   gap: 19px;
 }
 
-.section-title-container {
+.section-title-container,
+.section-option-container,
+.section-button-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

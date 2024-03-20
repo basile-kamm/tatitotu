@@ -16,6 +16,11 @@
   text-decoration: none;
 }
 
+.select.t-color {
+  border: 2px solid $primary;
+  padding: 8px 10px 6px;
+}
+
 .select-title-icon {
   width: 9px;
   height: 7px;

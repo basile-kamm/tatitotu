@@ -50,10 +50,19 @@
   right: 11px;
   opacity: 0.6;
   transition: opacity 0.3s;
+  animation: hoverWiggle 2s infinite;
+  animation-play-state: paused;
 
   &:hover {
     opacity: 1;
-    animation: hoverWiggle 2s infinite;
+    animation-play-state: running;
+  }
+}
+
+.textfield.t-print {
+  font-size: 14px;
+  .textfield-input {
+    width: 100%;
   }
 }
 

@@ -50,3 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+var printOption = document.querySelector("[data-printoption]");
+var printContainer = document.querySelector(".section-print-container");
+printOption.addEventListener("change", function () {
+  var printValue = printOption.checked;
+  if (printValue === true) {
+    printContainer.classList.add("is-active");
+  } else {
+    printContainer.classList.remove("is-active");
+  }
+});

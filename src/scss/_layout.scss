@@ -1,5 +1,11 @@
 .l-header {
   border-bottom: 1px solid $dark;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $light;
+  z-index: 5;
 }
 
 .l-footer {
@@ -8,5 +14,5 @@
 }
 
 .l-main {
-  padding: 85px 0 0;
+  padding: 115px 0 0;
 }
