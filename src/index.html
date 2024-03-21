@@ -477,6 +477,18 @@
                     Passé simple
                   </label>
                   <img src="asset/img/info.webp" alt="" class="switch-img">
+                  <div class="radio-verb-container">
+                    <label class="radio-label">
+                      <input type="radio" name="pronom" value="all" checked />
+                      <div class="radio-placeholder"></div>
+                      Tous les pronoms
+                    </label>
+                    <label class="radio-label">
+                      <input type="radio" name="pronom" value="ils" />
+                      <div class="radio-placeholder"></div>
+                      Seulement il/ils
+                    </label>
+                  </div>
                 </div>
                 <div class="switch-container">
                   <label class="switch">
@@ -674,9 +686,19 @@
               </div>
               <div class="section-option-container">
                 <p class="section-option-label">Type</p>
-                <div class="section-button-container">
-                  <a href="" class="button t-small t-outline is-active">Normal</a>
-                  <a href="" class="button t-small t-outline">Trouver mode + temps</a>
+                <div class="radio-type-container">
+                  <label class="radio-label">
+                    <input type="radio" name="type" value="normal" checked />
+                    <div class="radio-button">
+                      normal
+                    </div>
+                  </label>
+                  <label class="radio-label">
+                    <input type="radio" name="type" value="tense" />
+                    <div class="radio-button">
+                      trouver temps + mode
+                    </div>
+                  </label>
                 </div>
               </div>
               <label class="switch">
