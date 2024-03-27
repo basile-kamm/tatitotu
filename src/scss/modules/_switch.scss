@@ -65,6 +65,10 @@
   cursor: pointer;
   transition: opacity 0.3s;
 
+  #switch-icon {
+    fill: $dark;
+  }
+
   &:hover {
     opacity: 0.9;
   }

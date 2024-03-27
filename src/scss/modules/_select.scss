@@ -25,6 +25,11 @@
   width: 9px;
   height: 7px;
   transition: transform 0.3s;
+
+  .st0 {
+    stroke: $dark;
+    stroke-width: 2px;
+  }
 }
 
 .select-dropdown-text,

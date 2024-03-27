@@ -1,0 +1,49 @@
+.info-icon {
+  width: 15px;
+  height: 15px;
+
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  #icon-svg {
+    fill: $dark;
+  }
+}
+
+.info-container {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+
+  &:hover .info-icon {
+    opacity: 0.9;
+  }
+
+  &:hover .info-appear {
+    opacity: 1;
+    display: block;
+  }
+}
+
+.info-appear {
+  background: $dark;
+  color: $light;
+  padding: 5px 5px 8px 10px;
+  position: absolute;
+  white-space: nowrap;
+  text-align: right;
+  transform-origin: bottom right;
+  top: -35px;
+  right: 8px;
+  z-index: 3;
+  border-radius: 1px;
+  opacity: 0;
+  transition: opacity 0.3s 0.5s;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 96% 88%, 0 88%);
+  display: none;
+
+  .info-text {
+    font-size: 14px;
+  }
+}
