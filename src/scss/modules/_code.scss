@@ -8,14 +8,19 @@
   height: 40px;
   width: 40px;
   border: none;
-  transition: scale 0.3s;
 
-  img {
+  .code-submit-icon {
     height: 16px;
     width: 19px;
+    transition: scale 0.3s;
+    margin-top: 3px;
+
+    #path {
+      fill: $light;
+    }
   }
 
-  &:hover {
-    scale: 1.08;
+  &:hover .code-submit-icon {
+    scale: 1.15;
   }
 }

@@ -55,6 +55,10 @@
   animation: hoverWiggle 2s infinite;
   animation-play-state: paused;
 
+  .textfield-icon-path {
+    fill: $dark;
+  }
+
   &:hover {
     opacity: 1;
     animation-play-state: running;

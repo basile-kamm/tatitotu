@@ -50,6 +50,10 @@
     top: 17px;
     right: 10px;
     transition: scale 0.3s;
+
+    #path {
+      fill: $primary;
+    }
   }
 
   &:hover {
