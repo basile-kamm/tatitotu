@@ -7,7 +7,7 @@
 }
 
 .footer-link {
-  color: $dark;
+  color: rgb($dark);
   position: relative;
   font-size: 19px;
   text-decoration: none;
@@ -15,7 +15,7 @@
   border-bottom: 1px solid rgba($primary, 0);
 
   &::before {
-    @include hover-line($primary);
+    @include hover-line(rgb($primary));
     transform-origin: right;
   }
 
@@ -24,6 +24,6 @@
   }
 
   &:hover {
-    color: $primary;
+    color: rgb($primary);
   }
 }

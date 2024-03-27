@@ -9,7 +9,7 @@
 
   &::selection {
     background-color: rgba($primary, 0.8);
-    color: $light;
+    color: rgb($light);
   }
 }
 
@@ -26,8 +26,8 @@ body {
   line-height: 1.25;
   font-family: "Nohemi", sans-serif;
   font-weight: 400;
-  color: $dark;
-  background: $light;
+  color: rgb($dark);
+  background: rgb($light);
 }
 
 a {

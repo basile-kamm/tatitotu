@@ -4,7 +4,7 @@
 }
 
 .code-submit {
-  background: $primary;
+  background: rgb($primary);
   height: 40px;
   width: 40px;
   border: none;
@@ -16,7 +16,7 @@
     margin-top: 3px;
 
     #path {
-      fill: $light;
+      fill: rgb($light);
     }
   }
 

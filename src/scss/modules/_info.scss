@@ -7,7 +7,7 @@
   transition: opacity 0.3s;
 
   #icon-svg {
-    fill: $dark;
+    fill: rgb($dark);
   }
 }
 
@@ -27,8 +27,8 @@
 }
 
 .info-appear {
-  background: $dark;
-  color: $light;
+  background: rgb($dark);
+  color: rgb($light);
   padding: 5px 5px 8px 10px;
   position: absolute;
   white-space: nowrap;

@@ -38,7 +38,7 @@
     }
 
     input:checked + .radio-placeholder::before {
-      background: $primary;
+      background: rgb($primary);
     }
 
     input:not(:checked):hover + .radio-placeholder {
@@ -56,7 +56,7 @@
   }
 
   .radio-button {
-    border: 2px solid $primary;
+    border: 2px solid rgb($primary);
     padding: 8px 10px 6px;
     font-size: 14px;
     cursor: pointer;
@@ -64,8 +64,8 @@
   }
 
   input:checked + .radio-button {
-    background: $primary;
-    color: $light;
+    background: rgb($primary);
+    color: rgb($light);
   }
 
   input:not(:checked):hover + .radio-button {

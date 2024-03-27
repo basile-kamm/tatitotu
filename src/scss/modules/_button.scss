@@ -6,19 +6,19 @@
 }
 
 .button.t-outline {
-  border: 2px solid $primary;
+  border: 2px solid rgb($primary);
   overflow-y: hidden;
   position: relative;
 
   .button-text-first {
-    color: $dark;
+    color: rgb($dark);
     transition: transform 0.3s;
   }
 
   .button-text {
     position: absolute;
     top: 10px;
-    color: $light;
+    color: rgb($light);
     transform: translateY(150%);
     transition: transform 0.5s;
   }
@@ -30,7 +30,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: $primary;
+    background: rgb($primary);
     transform: translateY(100%);
     transition: transform 0.3s 0.1s;
   }
@@ -54,20 +54,20 @@
   padding: 10px 10px 6px;
 
   &.is-active {
-    background: $primary;
-    color: $light;
+    background: rgb($primary);
+    color: rgb($light);
   }
 
   &:hover {
-    background: $light;
-    color: $dark;
+    background: rgb($light);
+    color: rgb($dark);
   }
 }
 
 .button.t-icon {
   width: 100%;
-  border: 2px solid $primary;
-  color: $primary;
+  border: 2px solid rgb($primary);
+  color: rgb($primary);
   font-size: 16px;
   position: relative;
   padding: 15px 20px 10px;
@@ -84,12 +84,13 @@
     transition: scale 0.3s;
 
     #path {
-      fill: $primary;
+      fill: rgb($primary);
     }
   }
 
   &:hover {
-    box-shadow: inset 0 0 0 1px $primary, 0px 0px 4px 1px rgba($primary, 0.3);
+    box-shadow: inset 0 0 0 1px rgb($primary),
+      0px 0px 4px 1px rgba($primary, 0.3);
   }
 
   &:hover .button-icon {

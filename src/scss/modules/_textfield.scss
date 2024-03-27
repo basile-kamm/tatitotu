@@ -4,8 +4,8 @@
   .textfield-input {
     border-radius: 1px;
     border: 1.5px solid rgba($dark, 0.7);
-    color: $dark;
-    background: $light;
+    color: rgb($dark);
+    background: rgb($light);
     padding: 10px 15px 8px;
     transition: border 0.3s ease-out;
     font-size: 19px;
@@ -20,7 +20,7 @@
 
   .textfield-input:focus,
   .textfield-input.has-value {
-    border: 1.5px solid $dark;
+    border: 1.5px solid rgb($dark);
     filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.2));
   }
 
@@ -28,10 +28,9 @@
     position: absolute;
     top: 11px;
     left: 13px;
-    color: var(--light-grey);
     font-size: 16px;
     pointer-events: none;
-    background: $light;
+    background: rgb($light);
     transition: transform 0.3s;
     transform-origin: left;
     padding: 0 5px;
@@ -39,7 +38,7 @@
 
   .textfield-input:focus + .textfield-label,
   .textfield-input.has-value + .textfield-label {
-    color: var(--black);
+    color: rgb($dark);
     transform: translateY(-22px) scale(0.7);
   }
 }
@@ -56,7 +55,7 @@
   animation-play-state: paused;
 
   .textfield-icon-path {
-    fill: $dark;
+    fill: rgb($dark);
   }
 
   &:hover {

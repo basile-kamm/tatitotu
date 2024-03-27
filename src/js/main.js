@@ -73,4 +73,6 @@ pronounCheckbox.addEventListener("change", function () {
   }
 });
 
-document.body.style.setProperty("--dark", "#ff0000");
+document.body.style.setProperty("--primary", "255, 0, 0");
+document.body.style.setProperty("--dark", "0, 0, 0");
+document.body.style.setProperty("--light", "255, 255, 255");

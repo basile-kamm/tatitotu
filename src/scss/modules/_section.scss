@@ -1,7 +1,7 @@
 .section-title {
   font-size: 28px;
   text-transform: uppercase;
-  color: $dark;
+  color: rgb($dark);
   margin-bottom: 15px;
   position: relative;
 }
@@ -82,7 +82,7 @@
   cursor: pointer;
 
   &::before {
-    @include hover-line($dark);
+    @include hover-line(rgb($dark));
   }
 
   &:hover::before {
