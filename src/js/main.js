@@ -61,3 +61,16 @@ printOption.addEventListener("change", function () {
     printContainer.classList.remove("is-active");
   }
 });
+
+var pronounCheckbox = document.querySelector("[data-pronoun]");
+var pronounContainer = document.querySelector(".radio-verb-container");
+pronounCheckbox.addEventListener("change", function () {
+  var pronounValue = pronounCheckbox.checked;
+  if (pronounValue === true) {
+    pronounContainer.classList.add("is-open");
+  } else {
+    pronounContainer.classList.remove("is-open");
+  }
+});
+
+document.body.style.setProperty("--dark", "#ff0000");

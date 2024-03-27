@@ -7,13 +7,45 @@
 
 .button.t-outline {
   border: 2px solid $primary;
-  transition: background-position 0.8s, color 0.3s;
-  background: url(../asset/img/button-background.webp);
-  background-position: left;
+  overflow-y: hidden;
+  position: relative;
+
+  .button-text-first {
+    color: $dark;
+    transition: transform 0.3s;
+  }
+
+  .button-text {
+    position: absolute;
+    top: 10px;
+    color: $light;
+    transform: translateY(150%);
+    transition: transform 0.5s;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $primary;
+    transform: translateY(100%);
+    transition: transform 0.3s 0.1s;
+  }
 
   &:hover {
-    background-position: right;
-    color: $light;
+    .button-text-first {
+      transform: translateY(-150%);
+    }
+    &::before {
+      transform: translateY(0);
+    }
+
+    .button-text {
+      transform: translateY(0);
+    }
   }
 }
 
