@@ -1,0 +1,67 @@
+.theme {
+  position: absolute;
+  top: 0;
+  right: 0;
+  user-select: none;
+}
+
+.theme-icon,
+.theme-cross {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+
+  #path {
+    fill: rgb($dark);
+  }
+}
+
+.theme-icon {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+}
+
+.theme-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: rgb($light);
+  padding: 15px 20px;
+  right: 0;
+  top: 0;
+  gap: 5px;
+  border: 1px solid rgb($dark);
+  width: 250px;
+  transform: translateX(100%);
+  transition: transform 0.3s;
+
+  .theme-cross {
+    position: fixed;
+    top: 25px;
+    right: 40px;
+  }
+  &.is-active {
+    transform: translateX(0);
+
+    .radio-label {
+      transform: translateX(0);
+      transition: transform 0.3s 0.1s;
+
+      @for $i from 2 through 20 {
+        &:nth-of-type(#{$i}) {
+          transition-delay: #{$i / 10}s;
+        }
+      }
+    }
+  }
+
+  .radio-label {
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    gap: 10px;
+    font-size: 16px;
+    transform: translateX(130%);
+  }
+}

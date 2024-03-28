@@ -73,6 +73,70 @@ pronounCheckbox.addEventListener("change", function () {
   }
 });
 
-document.body.style.setProperty("--primary", "255, 0, 0");
-document.body.style.setProperty("--dark", "0, 0, 0");
+document.body.style.setProperty("--primary", "128, 0, 255");
+document.body.style.setProperty("--dark", "22, 22, 22");
 document.body.style.setProperty("--light", "255, 255, 255");
+
+const themeContainer = document.querySelector(".theme-container");
+const themeIcon = document.querySelector(".theme-icon");
+const themeCross = document.querySelector(".theme-cross");
+
+themeIcon.addEventListener("click", function () {
+  themeContainer.classList.add("is-active");
+});
+themeCross.addEventListener("click", function () {
+  themeContainer.classList.remove("is-active");
+});
+
+themeContainer.addEventListener("click", function () {
+  var radioButtonGroup = document.getElementsByName("theme");
+  var checkedRadio = Array.from(radioButtonGroup).find(
+    (radio) => radio.checked
+  );
+  console.log(checkedRadio.value);
+  if (checkedRadio.value === "light") {
+    document.body.style.setProperty("--primary", "128, 0, 255");
+    document.body.style.setProperty("--dark", "22, 22, 22");
+    document.body.style.setProperty("--light", "230, 230, 230");
+  } else if (checkedRadio.value === "dark") {
+    document.body.style.setProperty("--primary", "128, 0, 255");
+    document.body.style.setProperty("--light", "22, 22, 22");
+    document.body.style.setProperty("--dark", "255, 255, 255");
+  } else if (checkedRadio.value === "green") {
+    document.body.style.setProperty("--primary", "0, 219, 2");
+    document.body.style.setProperty("--light", "3, 40, 6");
+    document.body.style.setProperty("--dark", "255, 255, 255");
+  } else if (checkedRadio.value === "samurai") {
+    document.body.style.setProperty("--primary", "255, 51, 255");
+    document.body.style.setProperty("--light", "0, 51, 51");
+    document.body.style.setProperty("--dark", "255, 255, 102");
+  } else if (checkedRadio.value === "rgb") {
+    document.body.style.setProperty("--primary", "0, 255, 0");
+    document.body.style.setProperty("--light", "0, 0, 200");
+    document.body.style.setProperty("--dark", "255, 0, 0");
+  } else if (checkedRadio.value === "cmy") {
+    document.body.style.setProperty("--primary", "0, 255, 255");
+    document.body.style.setProperty("--light", "200, 0, 200");
+    document.body.style.setProperty("--dark", "255, 255, 0");
+  } else if (checkedRadio.value === "red") {
+    document.body.style.setProperty("--primary", "200, 0, 0");
+    document.body.style.setProperty("--light", "53, 0, 0");
+    document.body.style.setProperty("--dark", "255, 230, 230");
+  } else if (checkedRadio.value === "lineoff") {
+    document.body.style.setProperty("--primary", "62, 145, 146");
+    document.body.style.setProperty("--light", "24, 0, 61");
+    document.body.style.setProperty("--dark", "150, 221, 157");
+  } else if (checkedRadio.value === "lego") {
+    document.body.style.setProperty("--primary", "255,215,0");
+    document.body.style.setProperty("--light", "63,7,61");
+    document.body.style.setProperty("--dark", "240,	245,	245");
+  } else if (checkedRadio.value === "baka") {
+    document.body.style.setProperty("--primary", "35, 35, 35");
+    document.body.style.setProperty("--light", "5, 5,5");
+    document.body.style.setProperty("--dark", "25, 25, 25");
+  } else if (checkedRadio.value === "extralight") {
+    document.body.style.setProperty("--primary", "235, 235, 235");
+    document.body.style.setProperty("--light", "255, 255,255");
+    document.body.style.setProperty("--dark", "240, 240, 240");
+  }
+});
