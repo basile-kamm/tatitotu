@@ -112,7 +112,7 @@
           <label class="radio-label">
             <input type="radio" name="theme" value="baka" />
             <div class="radio-placeholder"></div>
-            Extra baka
+            Extra dark
           </label>
         </div>
       </div>
@@ -458,7 +458,7 @@
               </div>
                 <form action="" class="code-container">
                   <div class="textfield">
-                    <input type="text" name="code" class="textfield-input">
+                    <input type="text" name="code" class="textfield-input" placeholder="XX-XX-XX-XX">
                     <label class="textfield-label">Code à  8 caractères</label>
                   </div>
                   <button type="submit" class="code-submit">
@@ -487,8 +487,9 @@
                 </p>
               </div>
               <div class="textfield t-full">
-                <input type="text" name="code" class="textfield-input">
+                <input type="text" name="verb" data-textfield class="textfield-input">
                 <label class="textfield-label">Ajouter un verbe</label>
+                <p class="textfield-suggestions" data-suggestion></p>
                 <svg class="textfield-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 304.3 225.82" style="enable-background:new 0 0 304.3 225.82;" xml:space="preserve">
                   <g>
@@ -563,11 +564,11 @@
               <div class="section-title-container">
                 <h2 class="section-title">Temps</h2>
                 <div class="section-action-container">
-                  <p class="section-action">
+                  <p class="section-action" data-checkall>
                     tout cocher
                   </p>
                   <p>|</p>
-                  <p class="section-action">
+                  <p class="section-action" data-uncheckall>
                     tout décocher
                   </p>
                 </div>
@@ -576,7 +577,7 @@
                 <h3 class="section-verbe-title">Indicatif</h3>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox"  checked/>
+                    <input type="checkbox" data-checkbox checked/>
                     <div class="switch-wrapper">
                       <div class="switch-inner" ></div>
                     </div>
@@ -601,7 +602,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" checked/>
+                    <input type="checkbox" data-checkbox checked/>
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -626,7 +627,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" data-checkbox />
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -651,7 +652,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" data-checkbox />
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -676,7 +677,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" checked/>
+                    <input type="checkbox" data-checkbox checked/>
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -701,7 +702,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" data-checkbox />
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -726,7 +727,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" checked  data-pronoun/>
+                    <input type="checkbox" checked data-checkbox  data-pronoun/>
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -763,7 +764,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" data-checkbox />
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -791,7 +792,7 @@
                 <h3 class="section-verbe-title">Impératif</h3>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox"  checked/>
+                    <input type="checkbox" data-checkbox  checked/>
                     <div class="switch-wrapper">
                       <div class="switch-inner" ></div>
                     </div>
@@ -816,7 +817,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" data-checkbox />
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -844,7 +845,7 @@
                 <h3 class="section-verbe-title">Subjonctif</h3>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox"  checked/>
+                    <input type="checkbox" data-checkbox checked/>
                     <div class="switch-wrapper">
                       <div class="switch-inner" ></div>
                     </div>
@@ -869,7 +870,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" data-checkbox/>
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -894,7 +895,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" checked />
+                    <input type="checkbox" checked data-checkbox/>
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -919,7 +920,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" data-checkbox/>
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -947,7 +948,7 @@
                 <h3 class="section-verbe-title">Conditionnel</h3>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox"  checked/>
+                    <input type="checkbox"  checked data-checkbox/>
                     <div class="switch-wrapper">
                       <div class="switch-inner" ></div>
                     </div>
@@ -972,7 +973,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" data-checkbox/>
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -997,7 +998,7 @@
                 </div>           
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" data-checkbox/>
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -1026,7 +1027,7 @@
                 <h3 class="section-verbe-title">Participe</h3>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox"  checked/>
+                    <input type="checkbox" data-checkbox checked/>
                     <div class="switch-wrapper">
                       <div class="switch-inner" ></div>
                     </div>
@@ -1051,7 +1052,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" checked/>
+                    <input type="checkbox" data-checkbox checked/>
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>
@@ -1079,7 +1080,7 @@
                 <h3 class="section-verbe-title">Gérondif</h3>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox"  checked/>
+                    <input type="checkbox" data-checkbox checked/>
                     <div class="switch-wrapper">
                       <div class="switch-inner" ></div>
                     </div>
@@ -1104,7 +1105,7 @@
                 </div>
                 <div class="switch-container">
                   <label class="switch">
-                    <input type="checkbox" />
+                    <input type="checkbox" data-checkbox />
                     <div class="switch-wrapper">
                       <div class="switch-inner"></div>
                     </div>

@@ -32,7 +32,7 @@
   top: 0;
   gap: 5px;
   border: 1px solid rgb($dark);
-  width: 250px;
+  width: 342px;
   transform: translateX(100%);
   transition: transform 0.3s;
 
@@ -50,7 +50,7 @@
 
       @for $i from 2 through 20 {
         &:nth-of-type(#{$i}) {
-          transition-delay: #{$i / 10}s;
+          transition-delay: #{$i / 20}s;
         }
       }
     }
@@ -60,8 +60,9 @@
     display: flex;
     flex-direction: row;
     white-space: nowrap;
-    gap: 10px;
-    font-size: 16px;
+    align-items: top;
+    gap: 15px;
+    font-size: 18px;
     transform: translateX(130%);
   }
 }

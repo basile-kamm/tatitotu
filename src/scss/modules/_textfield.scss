@@ -5,13 +5,13 @@
     border-radius: 1px;
     border: 1.5px solid rgba($dark, 0.7);
     color: rgb($dark);
-    background: rgb($light);
     padding: 10px 15px 8px;
     transition: border 0.3s ease-out;
     font-size: 19px;
     text-transform: uppercase;
     height: 40px;
     transition: filter 0.3s;
+    background: rgb($light);
   }
 
   .textfield-input:hover {
@@ -41,6 +41,19 @@
     color: rgb($dark);
     transform: translateY(-22px) scale(0.7);
   }
+}
+
+.textfield-suggestions {
+  position: absolute;
+  top: 11px;
+  left: 18px;
+  font-size: 19px;
+  font-weight: 400;
+  text-transform: capitalize;
+  pointer-events: none;
+  color: rgba($dark, 0.7);
+  height: 70%;
+  width: 70%;
 }
 
 .textfield-icon {
@@ -78,6 +91,8 @@
     padding: 18px 20px 14px;
     width: 100%;
     text-transform: capitalize;
+    font-size: 19px;
+    font-weight: 400;
   }
 
   &:hover {

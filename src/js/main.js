@@ -62,17 +62,6 @@ printOption.addEventListener("change", function () {
   }
 });
 
-var pronounCheckbox = document.querySelector("[data-pronoun]");
-var pronounContainer = document.querySelector(".radio-verb-container");
-pronounCheckbox.addEventListener("change", function () {
-  var pronounValue = pronounCheckbox.checked;
-  if (pronounValue === true) {
-    pronounContainer.classList.add("is-open");
-  } else {
-    pronounContainer.classList.remove("is-open");
-  }
-});
-
 document.body.style.setProperty("--primary", "128, 0, 255");
 document.body.style.setProperty("--dark", "22, 22, 22");
 document.body.style.setProperty("--light", "255, 255, 255");
@@ -85,6 +74,9 @@ themeIcon.addEventListener("click", function () {
   themeContainer.classList.add("is-active");
 });
 themeCross.addEventListener("click", function () {
+  themeContainer.classList.remove("is-active");
+});
+document.querySelector("main").addEventListener("click", function () {
   themeContainer.classList.remove("is-active");
 });
 
@@ -140,3 +132,48 @@ themeContainer.addEventListener("click", function () {
     document.body.style.setProperty("--dark", "240, 240, 240");
   }
 });
+
+var checkAllTrigger = document.querySelector("[data-checkall]");
+var uncheckAllTrigger = document.querySelector("[data-uncheckall]");
+var checkBoxes = document.querySelectorAll("[data-checkbox]");
+
+var checkAll = function () {
+  checkBoxes.forEach((checkBox) => {
+    checkBox.checked = true;
+    var event = new Event("change");
+    checkBox.dispatchEvent(event);
+  });
+};
+var uncheckAll = function () {
+  checkBoxes.forEach((checkBox) => {
+    checkBox.checked = false;
+    var event = new Event("change");
+    checkBox.dispatchEvent(event);
+  });
+};
+
+checkAllTrigger.addEventListener("click", checkAll);
+uncheckAllTrigger.addEventListener("click", uncheckAll);
+
+var pronounCheckbox = document.querySelector("[data-pronoun]");
+var pronounContainer = document.querySelector(".radio-verb-container");
+pronounCheckbox.addEventListener("change", function () {
+  console.log("test");
+  var pronounValue = pronounCheckbox.checked;
+  if (pronounValue === true) {
+    pronounContainer.classList.add("is-open");
+  } else {
+    pronounContainer.classList.remove("is-open");
+  }
+});
+
+var verbs = ["Manger", "Modeler", "Boire", "Avoir", "Etre", "Pouvoir"];
+var verbTextfield = document.querySelector("[data-textfield]");
+var suggestions = document.querySelector("[data-suggestion]");
+
+var autoComplete = function () {
+  var items = verbs.filter((value) => value.includes(verbTextfield.value));
+  suggestions.innerHTML = items.join(", ");
+};
+
+verbTextfield.addEventListener("keyup", autoComplete);
