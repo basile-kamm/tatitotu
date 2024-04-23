@@ -177,3 +177,20 @@ var autoComplete = function () {
 };
 
 verbTextfield.addEventListener("keyup", autoComplete);
+
+var popupOpenTriggers = document.querySelectorAll("[data-popuptrigger]");
+var popupCloseTrigger = document.querySelector("[data-popupcross]");
+var popup = document.querySelector("[data-popup]");
+
+var popupClose = function () {
+  popup.classList.remove("active");
+};
+var popupOpen = function () {
+  popup.classList.add("active");
+};
+
+popupCloseTrigger.addEventListener("click", popupClose);
+document.querySelector("main").addEventListener("click", popupClose);
+popupOpenTriggers.forEach((popupOpenTrigger) => {
+  popupOpenTrigger.addEventListener("click", popupOpen);
+});

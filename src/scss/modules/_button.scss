@@ -3,6 +3,7 @@
   text-decoration: none;
   border-radius: 1px;
   white-space: none;
+  cursor: pointer;
 }
 
 .button.t-outline {
@@ -96,5 +97,49 @@
   &:hover .button-icon {
     scale: 1.2;
     transition: scale 0.3s 0.1s;
+  }
+}
+
+.button-popup {
+  position: fixed;
+  top: -500px;
+  z-index: 10;
+  background: rgb($light);
+  border: 1.5px solid rgb($dark);
+  width: 523px;
+  padding: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 5px 1px rgba($dark, 0.5);
+  transition: top 0.5s ease-out, transform 0.5s ease-out;
+  transform-style: preserve-3d;
+
+  &.active {
+    top: 0;
+    transform: translateX(-50%);
+  }
+  .button-popup-cross {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform-origin: center center;
+    transition: transform 0.5s ease-out;
+    cursor: pointer;
+
+    &:hover {
+      transform: rotate(180deg);
+    }
+    #path {
+      fill: rgb($dark);
+    }
+  }
+  .button-popup-gif {
+    pointer-events: none;
+  }
+
+  .button-popup-text {
+    margin-bottom: 10px;
   }
 }
