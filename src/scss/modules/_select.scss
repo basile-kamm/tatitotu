@@ -25,9 +25,9 @@
   width: 9px;
   height: 7px;
   transition: transform 0.3s;
+  color: rgb($dark);
 
   .st0 {
-    stroke: rgb($dark);
     stroke-width: 2px;
   }
 }

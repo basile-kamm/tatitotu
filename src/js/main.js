@@ -167,19 +167,32 @@ pronounCheckbox.addEventListener("change", function () {
   }
 });
 
-var verbs = ["Manger", "Modeler", "Boire", "Avoir", "Etre", "Pouvoir"];
+var verbs = [
+  "manger",
+  "modeler",
+  "boire",
+  "avoir",
+  "etre",
+  "pouvoir",
+  "aquérir",
+  "fuir",
+  "mouvoir",
+];
 var verbTextfield = document.querySelector("[data-textfield]");
 var suggestions = document.querySelector("[data-suggestion]");
 
 var autoComplete = function () {
   var items = verbs.filter((value) => value.includes(verbTextfield.value));
-  suggestions.innerHTML = items.join(", ");
+  suggestions.innerHTML = items.join("<br> ");
+  if (value == "") {
+    suggestions.innerHTML = items.join("");
+  }
 };
 
 verbTextfield.addEventListener("keyup", autoComplete);
 
 var popupOpenTriggers = document.querySelectorAll("[data-popuptrigger]");
-var popupCloseTrigger = document.querySelector("[data-popupcross]");
+var popupCloseTrigger = document.querySelector(".button-popup-cross");
 var popup = document.querySelector("[data-popup]");
 
 var popupClose = function () {

@@ -41,19 +41,27 @@
     color: rgb($dark);
     transform: translateY(-22px) scale(0.7);
   }
-}
 
-.textfield-suggestions {
-  position: absolute;
-  top: 11px;
-  left: 18px;
-  font-size: 19px;
-  font-weight: 400;
-  text-transform: capitalize;
-  pointer-events: none;
-  color: rgba($dark, 0.7);
-  height: 70%;
-  width: 70%;
+  .textfield-suggestions {
+    background: rgb($light);
+    border: 1.5px solid rgb($dark);
+    position: absolute;
+    top: 98%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: rgba($dark, 0.8);
+    width: 70%;
+    max-height: 550px;
+    z-index: 5;
+    transition: max-height 0.3s;
+    overflow: hidden;
+  }
+
+  .textfield-input:not(:focus) ~ .textfield-suggestions {
+    max-height: 0;
+  }
 }
 
 .textfield-icon {

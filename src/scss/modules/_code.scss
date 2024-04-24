@@ -19,10 +19,7 @@
     margin-top: 3px;
     position: relative;
     z-index: 3;
-
-    #path {
-      fill: rgb($light);
-    }
+    color: rgb($light);
   }
 
   &::before {

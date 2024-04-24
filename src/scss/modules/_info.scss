@@ -5,10 +5,7 @@
   opacity: 0.5;
   cursor: pointer;
   transition: opacity 0.3s;
-
-  #icon-svg {
-    fill: rgb($dark);
-  }
+  color: rgb($dark);
 }
 
 .info-container {
