@@ -177,6 +177,14 @@ var verbs = [
   "aquérir",
   "fuir",
   "mouvoir",
+  "aller",
+  "attraper",
+  "capturer",
+  "danser",
+  "foudroyer",
+  "rigoler",
+  "taire",
+  "utiliser",
 ];
 var verbTextfield = document.querySelector("[data-textfield]");
 var suggestions = document.querySelector("[data-suggestion]");
@@ -184,8 +192,8 @@ var suggestions = document.querySelector("[data-suggestion]");
 var autoComplete = function () {
   var items = verbs.filter((value) => value.includes(verbTextfield.value));
   suggestions.innerHTML = items.join("<br> ");
-  if (value == "") {
-    suggestions.innerHTML = items.join("");
+  if (items.length == 0) {
+    suggestions.innerHTML = "<p>Aucun verbe trouvé</p>";
   }
 };
 

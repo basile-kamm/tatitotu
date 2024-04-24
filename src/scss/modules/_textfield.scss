@@ -54,13 +54,20 @@
     color: rgba($dark, 0.8);
     width: 70%;
     max-height: 550px;
+    opacity: 1;
     z-index: 5;
-    transition: max-height 0.3s;
+    transition: max-height 0.3s, opacity 0.3;
     overflow: hidden;
+
+    p {
+      text-transform: lowercase;
+      font-size: 14px;
+    }
   }
 
   .textfield-input:not(:focus) ~ .textfield-suggestions {
     max-height: 0;
+    opacity: 0;
   }
 }
 
